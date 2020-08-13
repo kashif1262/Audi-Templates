@@ -9,8 +9,7 @@ import {
     Nav,
     NavItem,
     NavLink,
-    Container, 
-    UncontrolledDropdown,
+    Container, UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
@@ -72,18 +71,18 @@ class AppNavBar extends Component {
                                 <UncontrolledDropdown nav inNavbar>
                                     <DropdownToggle nav caret>
                                         Options
-              </DropdownToggle>
+                                     </DropdownToggle>
                                     <DropdownMenu right>
                                         <DropdownItem>
                                             Option 1
-                </DropdownItem>
+                                        </DropdownItem>
                                         <DropdownItem>
                                             Option 2
-                </DropdownItem>
+                                        </DropdownItem>
                                         <DropdownItem divider />
                                         <DropdownItem>
                                             Reset
-                </DropdownItem>
+                                        </DropdownItem>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                                 <NavItem>
