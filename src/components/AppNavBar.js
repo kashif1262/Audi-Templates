@@ -22,18 +22,26 @@ class AppNavBar extends Component {
         sceondIsOpen: false
     }
 
-    toggle = () => {
-        console.log(this.state.sceondIsOpen);
+    toggle = () => { 
+        if(this.state.sceondIsOpen){
         this.setState({
-            isOpen: !this.state.isOpen
+            isOpen: !this.state.isOpen,
+            sceondIsOpen: !this.state.sceondIsOpen
         });
+        }else{
+            this.setState({
+                isOpen: !this.state.isOpen
+            });
+        }
     }
+
     sceondToggle = () => {
         this.setState({
             sceondIsOpen: !this.state.sceondIsOpen
         });
 
     }
+    
     close = () => {
         this.setState({
             isOpen: false,
@@ -47,7 +55,7 @@ class AppNavBar extends Component {
             <React.Fragment  >
                 <Navbar color="light" light   >
                     <Container>
-                        <NavbarToggler onClick={this.toggle} />
+                        <NavbarToggler onClick={this.toggle }  />
                         <NavbarBrand ><Link to="/"><img src={logo} width="40px" alt="Audi" /></Link> </NavbarBrand>
                         <Nav className="py-3" navbar>
                             <NavItem>
