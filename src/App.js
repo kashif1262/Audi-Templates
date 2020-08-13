@@ -1,76 +1,74 @@
 import React from 'react';
+import { BrowserRouter as Router , Switch, Route, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 import AppNavBar from './components/AppNavBar';
-import TopNav from './components/TopNav';
-// import Banner from './components/Banner';
- import Footer from './components/Footer';
-// import Card from './components/MyCard';
-// import Card1 from './components/MyCard1';
-// import { Row, Container, Col } from 'reactstrap';
+import TopNav from './components/TopNav'; 
+import Footer from './components/Footer'; 
+
 
 
 function App() {
   return (
-    <div className="App">
-      <div className="container-fluid m-0 p-0 fixed-top">
-        <TopNav />
-        <AppNavBar />
-      </div>
-      <div height="500px"></div>
-      {/* <Banner />
-      <Container>
-        <Row>
-          <Card />
-          <Card />
-          <Card /> 
-          <Card />
-        </Row>
-      </Container>
-      <Banner />
-      <Container>
-        <Row>
-          <Card1 />
-          <Card1 />
-          <Card1 /> 
-          <Card1 />
-        </Row>
-      </Container>
-      <Banner />
-      <Container>
-        <Row>
-          <Card />
-          <Card />
-          <Card /> 
-          <Card />
-        </Row>
-      </Container>
-      <Banner />
-      <Container>
-        <Row>
-          <Card />
-          <Card />
-          <Card /> 
-          <Card />
-        </Row>
-      </Container>
-      <Banner />
-      <Container>
-        <Row>
-         <Col sm="3">
-         </Col>
-         <Col sm="3">
-         </Col>
-         <Col sm="3">
-         </Col>
-         <Col sm="3">
-         </Col>
-        </Row>
-      </Container>*/}
-      
-      <Footer />
-    </div> 
+    <div className="App"> 
+        <Router>
+          <TopNav />
+          <AppNavBar /> 
+          
+          <Switch>
+            <Route exact path="/" >
+              <Home />
+            </Route>
+             
+            <Route path="/audi" >
+              <Audi />
+            </Route>
+            <Route path="/company" >
+              <Company />
+            </Route>
+            <Route path="/careers" >
+              <Careers />
+            </Route>
+
+          </Switch>
+          
+        </Router> 
+        <Footer />
+    </div>
   );
 }
 
 export default App;
+
+
+function Home() {
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  );
+}
+
+function Audi() {
+  return (
+    <div>
+      <h2>Audi</h2>
+    </div>
+  );
+}
+
+function Careers() {
+  return (
+    <div>
+      <h2>careers</h2>
+    </div>
+  );
+}
+function Company() {
+  return (
+    <div>
+      <h2>company</h2>
+    </div>
+  );
+}
+ 

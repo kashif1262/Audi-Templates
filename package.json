@@ -1,6 +1,6 @@
 {
-  "name": "react-tutorials",
-  "version": "0.1.0",
+  "name": "audi-templates",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,6 +10,7 @@
     "react": "^16.13.1",
     "react-bootstrap-icons": "^1.0.3-alpha5",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.5.1"
   },
@@ -33,5 +34,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashif1262/Audi-Templates.git"
+  },
+  "keywords": [
+    "react",
+    "react-dom",
+    "reactstrap",
+    "bootstrap",
+    "react",
+    "router",
+    "bootstrap-icon"
+  ],
+  "author": "kashif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashif1262/Audi-Templates/issues"
   }
 }

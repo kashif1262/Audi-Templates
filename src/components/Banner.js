@@ -62,7 +62,7 @@ class Banner extends Component {
 
     render() {
         return (
-            <div className="mt-5"  >
+            <div  >
                 <Carousel
                     activeIndex={this.state.activeIndex}
                     next={this.next}
