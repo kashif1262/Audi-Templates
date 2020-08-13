@@ -9,10 +9,7 @@ import {
     Nav,
     NavItem,
     NavLink,
-    Container, UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
+    Container
 } from 'reactstrap';
 
 import logo from '../Audi.png';
@@ -60,42 +57,22 @@ class AppNavBar extends Component {
                             <NavItem>
                                 <NavLink ><CalendarDay /></NavLink>
                             </NavItem>
-                        </Nav>
-
+                        </Nav> 
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="py-3" navbar>
                                 <NavItem>
-                                    <Link onClick={this.sceondToggle} to="/Audi" className="pr-3" >Experience Audi</Link>
-
-                                </NavItem>
-                                <UncontrolledDropdown nav inNavbar>
-                                    <DropdownToggle nav caret>
-                                        Options
-                                     </DropdownToggle>
-                                    <DropdownMenu right>
-                                        <DropdownItem>
-                                            Option 1
-                                        </DropdownItem>
-                                        <DropdownItem>
-                                            Option 2
-                                        </DropdownItem>
-                                        <DropdownItem divider />
-                                        <DropdownItem>
-                                            Reset
-                                        </DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
+                                    <Link onClick={this.sceondToggle} to="/Audi" className="pr-3" >Experience Audi</Link> 
+                                    <AppNavBarSceond display="d-lg-none d-md-none d-sm-block container" isOpen={this.state.sceondIsOpen} close={this.close} />
+                                </NavItem> 
                                 <NavItem>
                                     <Link onClick={this.close} to="/Company" className="pr-3"  >Company</Link>
                                 </NavItem>
                                 <NavItem>
                                     <Link onClick={this.close} to="/Careers" className="pr-3" >Careers</Link>
-                                </NavItem>
-                            </Nav>
-
-                        </Collapse>
-
-
+                                </NavItem> 
+                            </Nav> 
+                        </Collapse> 
+                        <AppNavBarSceond display="d-none d-md-block d-lg-block p-0"  isOpen={this.state.sceondIsOpen} close={this.close} />
                     </Container>
                 </Navbar>
             </React.Fragment>
@@ -104,3 +81,20 @@ class AppNavBar extends Component {
 }
 
 export default AppNavBar;
+
+
+function AppNavBarSceond(props) {
+
+
+    return (
+         <Container className={props.display}>
+            <Collapse  isOpen={props.isOpen} navbar >
+                <Nav navbar>
+                    <NavItem>
+                        <Link onClick={props.close} to="/Company" className="pr-3"  >Company</Link>
+                    </NavItem> 
+                </Nav>
+            </Collapse> 
+        </Container>
+    );
+}

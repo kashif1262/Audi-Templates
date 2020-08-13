@@ -59,9 +59,15 @@
   font-weight: 400;
   line-height: 1;
 }
+.display{
+  display: block;
+}
 
 @media (max-width: 768px) {
   .top-nav {
+    display: none;
+  }
+  .display{
     display: none;
   }
 
