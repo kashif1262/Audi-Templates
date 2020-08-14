@@ -1,39 +1,43 @@
 import React from 'react';
-import { BrowserRouter as Router , Switch, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
+import 'animate.css';
 import AppNavBar from './components/AppNavBar';
-import TopNav from './components/TopNav'; 
-import Footer from './components/Footer'; 
-
-
+import TopNav from './components/TopNav';
+import Footer from './components/Footer';
+import Banner1 from './components/Banner1';
+import BannerText from './components/BannerText';
+import AppCard from './components/AppCard';
+import { Container, Row, Col } from 'reactstrap';
+import BannerSimple from './components/BannerSimple';
 
 function App() {
   return (
-    <div className="App"> 
-        <Router>
-          <TopNav />
-          <AppNavBar /> 
-          
-          <Switch>
-            <Route exact path="/" >
-              <Home />
-            </Route>
-             
-            <Route path="/audi" >
-              <Audi />
-            </Route>
-            <Route path="/company" >
-              <Company />
-            </Route>
-            <Route path="/careers" >
-              <Careers />
-            </Route>
+    <div className="App">
+      <Router>
+        <TopNav />
+        <AppNavBar />
 
-          </Switch>
-          
-        </Router> 
-        <Footer />
+        <Switch>
+          <Route exact path="/" >
+            <Home />
+          </Route>
+
+          <Route path="/audi" >
+            <Audi />
+          </Route>
+          <Route path="/company" >
+            <Company />
+          </Route>
+          <Route path="/careers" >
+            <Careers />
+          </Route>
+
+        </Switch>
+
+      </Router>
+      <Footer />
     </div>
   );
 }
@@ -43,9 +47,48 @@ export default App;
 
 function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-    </div>
+    <React.Fragment>
+      <Banner1 />
+      <BannerText />
+      <Container>
+        <Row>
+          <Col className="mt-5" sm="6">
+            <AppCard /> 
+          </Col>
+          <Col className="mt-5" sm="6">
+            <AppCard /> 
+          </Col>
+        </Row>
+        <Row>
+          <Col className="mt-5" sm="6">
+            <AppCard /> 
+          </Col>
+          <Col className="mt-5" sm="6">
+            <AppCard /> 
+          </Col>
+        </Row>
+      </Container>
+      <BannerSimple />
+      <Container>
+        <Row>
+          <Col className="mt-5" sm="4">
+            <AppCard /> 
+          </Col>
+         
+          <Col className="mt-5" sm="4">
+            <AppCard /> 
+          </Col>
+         
+          <Col className="mt-5" sm="4">
+            <AppCard /> 
+          </Col>
+        </Row>
+      </Container>
+
+      
+
+
+    </React.Fragment>
   );
 }
 
@@ -71,4 +114,3 @@ function Company() {
     </div>
   );
 }
- 
