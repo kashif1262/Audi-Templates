@@ -11,7 +11,8 @@ import BannerText from './components/BannerText';
 import AppCard from './components/AppCard';
 import { Container, Row, Col } from 'reactstrap';
 import BannerSimple from './components/BannerSimple';
-
+import ImageView from './components/ImageView';
+import img from './img/banner-img.jpg';
 function App() {
   return (
     <div className="App">
@@ -68,7 +69,7 @@ function Home() {
           </Col>
         </Row>
       </Container>
-      <BannerSimple />
+      <BannerSimple url={img}  />
       <Container>
         <Row>
           <Col className="mt-5" sm="4">
@@ -84,8 +85,26 @@ function Home() {
           </Col>
         </Row>
       </Container>
-
+      <BannerSimple color="blue" />
       
+      <Container>
+        <Row>
+          <Col className="pr-sm-0" sm="6">
+          <ImageView /> 
+          </Col>
+          <Col className="pl-sm-0" sm="6">
+          <ImageView /> 
+          </Col>
+        </Row>
+        <Row>
+          <Col className="pr-sm-0" sm="6">
+          <ImageView /> 
+          </Col>
+          <Col className="pl-sm-0" sm="6">
+            <ImageView /> 
+          </Col>
+        </Row>
+      </Container>
 
 
     </React.Fragment>
